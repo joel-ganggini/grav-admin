@@ -1,7 +1,20 @@
-title: Grav
+title: 'Telefónica | Dirección de Transformación TI'
+default_lang: Perú
 author:
-  name: Joe Bloggs
-  email: 'joe@example.com'
+  name: 'Joel Ganggini García'
+  email: joel.ganggini@telefonica.com
+taxonomies:
+  - category
+  - tag
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+  description: 'Telefónica | Dirección de Transformación TI'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects:
+  - Lima
+routes: null
+blog:
+  route: /blog

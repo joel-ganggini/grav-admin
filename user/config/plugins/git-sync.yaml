@@ -1,0 +1,28 @@
+enabled: true
+folders:
+  - pages
+sync:
+  on_save: true
+  on_delete: true
+  on_media: true
+  cron_enable: false
+  cron_at: '0 12,23 * * *'
+local_repository: null
+repository: 'https://github.com/jganggini/grav-admin'
+no_user: '0'
+user: jganggini
+password: gitsync-def50200f1988205d55f0d2be2c7c1e2814e826aa6600f7718dad27d1a385ab882fe8958bc8c88f07a7200fb76fec01b740e0a1e0426cb8ca6fe31b1784d6da3188e27d68f520e14c08ed4fc7fd41037d5b2963ee942420a91e6008368a3f0
+webhook: /_git-sync-7a2051b1da90
+webhook_enabled: '0'
+webhook_secret: b7db5df0d74a99234a4dc95ff08fe27f4dd5ca4e4e17907c
+branch: master
+remote:
+  name: origin
+  branch: master
+git:
+  author: gituser
+  message: '(Grav GitSync) Automatic Commit'
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+logging: false

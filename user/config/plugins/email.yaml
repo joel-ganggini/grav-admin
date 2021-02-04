@@ -1,0 +1,29 @@
+enabled: true
+from: jganggini@outlook.com
+from_name: null
+to: jganggini@outlook.com
+to_name: null
+queue:
+  enabled: false
+  flush_frequency: '* * * * *'
+  flush_msg_limit: 10
+  flush_time_limit: 100
+mailer:
+  engine: smtp
+  smtp:
+    server: Outlook.Office365.com
+    port: 587
+    encryption: tls
+    user: jganggini@outlook.com
+    password: 486N@.m1759
+  sendmail:
+    bin: '/usr/sbin/sendmail -bs'
+content_type: text/html
+debug: true
+charset: null
+cc: null
+cc_name: null
+bcc: null
+reply_to: null
+reply_to_name: null
+body: null

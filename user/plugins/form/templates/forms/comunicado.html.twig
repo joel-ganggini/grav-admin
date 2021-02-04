@@ -1,0 +1,20 @@
+{% macro render_field(form, fields, scope) %}
+
+    {# file-img #}
+    {% set values = form.value(scope ~ 'email') %}
+
+    {# devuelve true si la variable foo es iterable #}
+    {% if values is iterable %}
+        {% for value in values %}
+            Hello 1 {{ string(value)|e }}!
+        {% endfor %}
+    {% else %}
+        {# values es probablemente un string #}
+        Hello 2 {{ string(value)|e }}!
+    {% endif %}
+    
+{% endmacro %}
+
+{% import _self as macro %}
+
+{{ macro.render_field(form, form.fields, '') }}

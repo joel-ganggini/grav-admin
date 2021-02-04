@@ -1,0 +1,17 @@
+{% macro render_field(form, fields, scope) %}
+
+    {# file-img #}
+    {% set values = form.value(scope ~ 'file-img') %}
+
+    {# devuelve true si la variable es iterable #}
+    {% if values is iterable %}
+        {% for value in values %}
+            <img src="https://ad-tdp.azurewebsites.net/{{ string(value.path)|e }}">
+        {% endfor %}
+    {% endif %}
+    
+{% endmacro %}
+
+{% import _self as macro %}
+
+{{ macro.render_field(form, form.fields, '') }}

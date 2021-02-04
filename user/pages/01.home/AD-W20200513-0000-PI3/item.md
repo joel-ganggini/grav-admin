@@ -1,53 +1,39 @@
 ---
 title: 'TDP-CLI & Integración, Creación de Microservicios'
 date: '13-05-2020 00:00'
-author: 'Tasha Maxwell'
+author: 'Joel Ganggini'
 continue_link: true
 hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 taxonomy:
     category:
         - blog
     tag:
-        - Arquitectura-Digital
         - PI3
-        - Workshop
-        - Integración        
+        - ARQUITECTURA-DIGITAL
+        - WORKSHOP
+        - INTEGRACIÓN
 header_image_alt_text: Mountains
 ---
 
 [plugin:youtube](https://youtu.be/OgV05y7QMEg)
 
-The [Quark theme](https://getgrav.org/downloads/themes) has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page.  The theme will merge the combination of the defaults with any `body_classes` set. This allows you to easily add hero classes to give your blog post some **bling**.
+Este workshop tiene como objetivo, comprender el funcionamiento del `TDP-CLI` para poder ser utilizado como base en los proyectos de integración al momento de crear los microservicios y puedan estar alineados a los estándares de desarrollo de Arquitectura Digital.
 
 ===
 
-## Body Classes
+#### Temas
+------
 
-```yaml
-body_classes: "header-dark header-transparent"
-```
+* Objetivos.
+* Diagrama de componentes, generador de Plantillas.
+* Requisitos para desplegar `TDP-CLI`.
+* Generador de plantillas de microservicios en base a Arquitectura Digital.
+* Generación del Microservicio Base.
+* Calidad de Código, Cobertura.
+* Config Server.
 
-On a particular page will ensure that page has those options enabled (assuming they are false by default).
+#### Linemiento
+------
 
-## Hero Options
-
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
-
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
-
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
-
-* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-* `title-h1h2` - Enforced a close matched h1/h2 title pairing
-* `parallax` - Enables a CSS-powered parallax effect
-* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
-
-The `hero_image` should point to an image file in the current page folder.
+* Para cada microservicio que se cree se debe usar el `TDP-CLI`, ya que asegura el funcionamiento del proyecto.
+* No se debe reutilizar otro microservicio para crear uno nuevo.

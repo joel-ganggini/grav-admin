@@ -1,52 +1,62 @@
 ---
 title: 'Comunicación de Evolución de Activos'
 date: '21-08-2020 15:00'
-author: 'Tasha Maxwell'
+author: 'Joel Ganggini'
 continue_link: true
 hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 taxonomy:
     category:
         - blog
     tag:
-        - Arquitectura-Digital
-        - Evolución
         - PI4
+        - ARQUITECTURA-DIGITAL
+        - EVOLUCIÓN
 header_image_alt_text: Mountains
 ---
 
 [plugin:youtube](https://youtu.be/niyoVKO-OfQ)
 
-The [Quark theme](https://getgrav.org/downloads/themes) has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page.  The theme will merge the combination of the defaults with any `body_classes` set. This allows you to easily add hero classes to give your blog post some **bling**.
+Construcción de activos desarrollados de los frentes de Arquitectura Digital.
 
 ===
 
-## Body Classes
+#### PLATAFORMA
+------
 
-```yaml
-body_classes: "header-dark header-transparent"
-```
+**Monitoreo de AKS** <mark>Próximamente</mark>
+* Log Analytics permitirá ver el comportamiento delo contenedores.
 
-On a particular page will ensure that page has those options enabled (assuming they are false by default).
+#### DEVOPS
+------
 
-## Hero Options
+**Despliegue con Helm**
+* Mejora en ciclo de despliegue utilizando la herramienta Helm.
 
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
+#### INTEGRACIÓN
+------
 
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
+**Framework Génesis**
+  * Mejoras en el catálogo de errores. 
+   
+**Nueva versión del framework 1.3.6**
+* Framework
+  * Se crea un nuevo starter para el uso del Microsoft Azure Cosmos DB.
+* Repositorio Base
+  * Nueva Versión del Framework
+  * Las pruebas (test) tienen su propio archivo de propiedades (properties).
+* TDP-CLI
+  * Se agrega la pregunta si se desea agregar la dependencia del starter para el uso del Cosmos DB.
 
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
+#### FRONTEND
+------
 
-* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-* `title-h1h2` - Enforced a close matched h1/h2 title pairing
-* `parallax` - Enables a CSS-powered parallax effect
-* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
+**Nuevos Componentes**
+* [Chip](https://genesiscomponentguide.azurewebsites.net/principal/componentesweb/chip)
+* [Snackbar](https://genesiscomponentguide.azurewebsites.net/principal/componentesweb/snackbar)
+* [Slider](https://genesiscomponentguide.azurewebsites.net/principal/componentesweb/slider)
 
-The `hero_image` should point to an image file in the current page folder.
+#### FASTDATA
+------
+
+**Construccion de tableros** <mark>Próximamente</mark>
+* Se podrán observar el comportamiento de aplicaciones webs en tiempo real.

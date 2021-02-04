@@ -1,52 +1,57 @@
 ---
 title: 'Comunicación de Evolución de Activos'
 date: '07-08-2020 15:00'
-author: 'Tasha Maxwell'
+author: 'Joel Ganggini'
 continue_link: true
 hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 taxonomy:
     category:
         - blog
     tag:
-        - Evolución
         - PI4
-        - Arquitectura-Digital
+        - ARQUITECTURA-DIGITAL
+        - EVOLUCIÓN
 header_image_alt_text: Mountains
 ---
 
 [plugin:youtube](https://youtu.be/fHND_yKhMX0)
 
-The [Quark theme](https://getgrav.org/downloads/themes) has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page.  The theme will merge the combination of the defaults with any `body_classes` set. This allows you to easily add hero classes to give your blog post some **bling**.
+Construcción de activos desarrollados de los frentes de Arquitectura Digital.
 
 ===
 
-## Body Classes
+#### PLATAFORMA
+------
 
-```yaml
-body_classes: "header-dark header-transparent"
-```
+**Componentes de Google**
+* Disponibilidad componente de Firebase para envíos de notificaciones Push.
 
-On a particular page will ensure that page has those options enabled (assuming they are false by default).
+#### DEVOPS
+------
 
-## Hero Options
+**Rollback Frotend**
+* Nueva opción en el pipeline que permite revertir el ultimo despliegue.
 
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
+#### INTEGRACIÓN
+------
 
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
+**Solución de Reintentos**
+* Con este activo se desea asegurar el éxito de las transacciones con una solución de reintentos.
 
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
+**Framework Génesis**
+* Nueva versión del framework 1.3.5 (Estable).
+  * Mejora en la emisión Swagger.
+  * Manejo de Excepciones.
 
-* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-* `title-h1h2` - Enforced a close matched h1/h2 title pairing
-* `parallax` - Enables a CSS-powered parallax effect
-* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
+#### FRONTEND
+------
 
-The `hero_image` should point to an image file in the current page folder.
+**Push Notification**
+* Componente Cross para enviar notificaciones masivas a clientes.
+
+#### FASTDATA
+------
+
+**Componentes de Telemetría**
+* Conocer el rendimiento de las aplicaciones en producción permitirá detectar cualquier anomalía.
+* Comparación entre Application Insights y Google Analytics.

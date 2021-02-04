@@ -1,0 +1,11 @@
+{% macro render_field(form, fields, scope) %}
+{% import _self as self %}
+{# email #}
+{% set values = form.value(scope ~ 'email') %}
+{# split #}
+{% set options = fields.email.options[values]|replace({' ': ''}) %}
+{% set foo = options|split(']') %}
+{{ foo[1] }}
+{% endmacro %}
+{% import _self as macro %}
+{{ macro.render_field(form, form.fields, '') }}

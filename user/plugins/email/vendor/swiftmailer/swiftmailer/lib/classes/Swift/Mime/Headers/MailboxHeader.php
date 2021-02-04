@@ -114,9 +114,51 @@ class Swift_Mime_Headers_MailboxHeader extends Swift_Mime_Headers_AbstractHeader
      */
     public function setNameAddresses($mailboxes)
     {
+        /*
+            Autor:      jganggini
+            Fecha:      24-11-2020
+            Detalle:    twig no devueve el formato esperado por el campo To
+        */
+        $string_mailboxes = json_encode($mailboxes);
+        $vowels = array('\n', ' ','\n"', '\\');
+        $string_mailboxes = str_replace($vowels, '', $string_mailboxes);
+        $vowels = array('""');
+        $string_mailboxes = str_replace($vowels, '"', $string_mailboxes);
+        $vowels = array(';');
+        $string_mailboxes = str_replace($vowels, ':null};{', $string_mailboxes);
+        
+        $i = substr_count($string_mailboxes, ';');
+        $f = 0;
+        $firs_email = '';
+        if($i > 0) {
+            $array_mailboxes = explode(";", $string_mailboxes);
+
+            foreach ($array_mailboxes as &$valor) {
+                /* Paso 1: Como no enviava al primer correo lo almaceno y lo reenvio al final. */
+                if ($f == 0) {
+                    $firs_email = $valor;
+                }
+                $f++;
+
+                $valor = json_decode($valor, true);
+                $this->mailboxes = $this->normalizeMailboxes((array) $valor);
+                $this->setCachedValue(null); //Clear any cached value
+            }            
+            /* Paso 2: reenviando correo almacenado. */
+            $firs_email = json_decode($firs_email, true);
+            $this->mailboxes = $this->normalizeMailboxes((array) $firs_email);
+            $this->setCachedValue(null); //Clear any cached value
+
+        } else {
+            $this->mailboxes = $this->normalizeMailboxes((array) $mailboxes);
+            $this->setCachedValue(null); //Clear any cached value
+        }
+
+        /* Codigo Original        
         $this->mailboxes = $this->normalizeMailboxes((array) $mailboxes);
-        $this->setCachedValue(null); //Clear any cached value
-    }
+        $this->setCachedValue(null); //Clear any cached value        
+        */
+    }    
 
     /**
      * Get the full mailbox list of this Header as an array of valid RFC 2822 strings.
@@ -263,6 +305,8 @@ class Swift_Mime_Headers_MailboxHeader extends Swift_Mime_Headers_AbstractHeader
         foreach ($mailboxes as $key => $value) {
             if (is_string($key)) {
                 //key is email addr
+                $key = str_replace("\n", '', $key);
+                $key = str_replace(" ", '', $key);
                 $address = $key;
                 $name = $value;
             } else {
